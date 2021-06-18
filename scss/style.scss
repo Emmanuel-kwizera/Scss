@@ -10,7 +10,14 @@ $secondary-color: #ff8700;
     } @else {
       @return #fff;
     }
-  }
+}
+
+@mixin set-background($color) {
+    background-color: $color;
+    color: set-text-color($color)
+}
+  
+
 * {
     box-sizing: border-box;
     margin: 0;
