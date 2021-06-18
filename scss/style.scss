@@ -5,6 +5,13 @@ $primary-color: #0e6cff;
 // $primary-color: #e0ffff;
 $secondary-color: #ff8700;
 
+@function set-text-color($color) {
+    @if(lightness($color) > 70) {
+      @return #333;
+    } @else {
+      @return #fff;
+    }
+  }
 * {
     box-sizing: border-box;
     margin: 0;
